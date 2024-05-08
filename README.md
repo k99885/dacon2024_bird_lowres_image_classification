@@ -1,0 +1,1 @@
+# dacon2024_bird_lowres_image_classification
