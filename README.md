@@ -1,1 +1,1 @@
-# dacon2024_bird_lowres_image_classification
+### 2024 월간 데이콘 저해상도 조류 이미지 분류 AI 경진 대회
