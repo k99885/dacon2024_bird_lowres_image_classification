@@ -84,6 +84,8 @@ val_images = val_generator.flow_from_dataframe(
 
 ## 4. 모델 생성
 여러가지 CNN 기반 모델들을 테스트 해본결과 EfficientNetV2B3 의 성능이 가장 좋았습니다.
+<https://github.com/k99885/dacon2024_bird_lowres_image_classification/blob/a4190bc5a22be6a367c699818ff35dfd87fd5772/EfficientNetV2B3.PNG>
+<https://arxiv.org/abs/2104.00298>
 ```
 pretrained_model = tf.keras.applications.EfficientNetV2B3 (
     input_shape=(256, 256, 3),
