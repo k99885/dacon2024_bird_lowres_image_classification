@@ -35,6 +35,19 @@
 csv파일안에는 데이터들의 label과 그에 해당하는 데이터의 주소가 적혀져있습니다.
 ![CSV](https://github.com/k99885/dacon2024_bird_lowres_image_classification/assets/157681578/9ad91819-2a45-4a31-93ab-b3af228d3203)
 
+```
+file='/content/drive/MyDrive/dataset/birds'
+t_csv='train.csv'
+t_csv=os.path.join(file,t_csv)
+df = pd.read_csv(t_csv)
+
+train_image_paths = image_paths.str.replace('./', '')  # "./" 제거
+full_image_paths = [os.path.join(file, img_path) for img_path in train_image_paths]
+full_image_paths = pd.Series(full_image_paths, name='Filepath').astype(str)
+image_df = pd.concat([full_image_paths, labels], axis=1)
+```
+google drive를 mount하여 csv파일을 읽어오고 데이터 사용을 위하여 image_df (판다스 파일)을 생성하였습니다.
+
 ## 3. 데이터 로드
 ```
 train_generator = ImageDataGenerator(
