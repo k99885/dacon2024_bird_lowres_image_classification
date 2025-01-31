@@ -95,6 +95,8 @@ val_images = val_generator.flow_from_dataframe(
 ```
 생성된 ImageDataGenerator에서 flow_from_dataframe을 호출하여 데이터를 로드해준후에 여러가지 파라메타들을 설정해 주었습니다.
 
+![lanczos 보간](https://github.com/user-attachments/assets/9b0feb3f-e03e-4884-a5e1-477f3efc904d)
+
 ## 4. 모델 생성
 여러가지 CNN 기반 모델들을 테스트 해본결과 EfficientNetV2B3 의 성능이 가장 좋았습니다.
 <https://github.com/k99885/dacon2024_bird_lowres_image_classification/blob/a4190bc5a22be6a367c699818ff35dfd87fd5772/EfficientNetV2B3.PNG>
